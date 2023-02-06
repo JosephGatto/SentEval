@@ -61,7 +61,7 @@ class SE(object):
 
         tpath = self.params.task_path
         assert name in self.list_tasks, str(name) + ' not in ' + str(self.list_tasks)
-
+        print('Evaluating: ', name)
         # Original SentEval tasks
         if name == 'CR':
             self.evaluation = CREval(tpath + '/downstream/CR', seed=self.params.seed)
